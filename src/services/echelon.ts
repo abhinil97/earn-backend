@@ -45,3 +45,35 @@ export const getEchelonMarketOverview = async (tokenAddress: string) => {
     };
   }
 }
+
+// Interface for Echelon user portfolio
+export interface EchelonUserPortfolio {
+  protocol: 'echelon';
+  userAddress: string;
+  reserves: any[]; // TODO: Define proper type when Echelon integration is ready
+  totalCollateral: string;
+  totalDebt: string;
+  healthFactor: string;
+}
+
+// Get user portfolio from Echelon
+// TODO: Implement when Echelon protocol integration is ready
+export const getEchelonUserPortfolio = async (address: string): Promise<EchelonUserPortfolio | { error: string }> => {
+  try {
+    console.log("🔍 [Echelon] Getting user portfolio for address:", address);
+    
+    // TODO: Call Echelon smart contract to get user reserves data
+    // Placeholder implementation
+    console.log("⚠️ [Echelon] Integration not yet available");
+    
+    return {
+      error: 'Echelon user portfolio integration not yet available'
+    };
+
+  } catch (error: any) {
+    console.error("❌ [Echelon] Error fetching user portfolio:", error.message);
+    return {
+      error: error.message || 'Failed to fetch Echelon user portfolio data'
+    };
+  }
+};

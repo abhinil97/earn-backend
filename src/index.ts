@@ -50,10 +50,10 @@ app.get('/get-market-details-by-asset/:address/:market', async (req, res) => {
 });
 
 // Endpoint 4: Get user portfolio
-app.get('/getuserportfolio/:address', (req, res) => {
+app.get('/get-user-portfolio/:address', async (req, res) => {
   console.log("Getting user portfolio for address: ", req.params.address);
   const { address } = req.params;
-  const portfolio = getUserPortfolio(address);
+  const portfolio = await getUserPortfolio(address);
   res.json(portfolio);
 });
 

@@ -1,3 +1,4 @@
+//0x6120763be984a6be5902f8fdbaa8c5bdb40aa8ba13addef9714ea62d78806932
 export const getAssets = () => {
   return {
     assets: [
