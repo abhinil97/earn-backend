@@ -1,8 +1,8 @@
 import express from 'express';
-import { getMarketByAsset } from './services/market';
-import { getUserPortfolio } from './services/portfolio';
-import { getAssets } from './services/asset';
-import { getAaveMarketData } from './services/aave';
+import { getMarketByAsset } from './services/market.js';
+import { getUserPortfolio } from './services/portfolio.js';
+import { getAssets } from './services/asset.js';
+import { getAaveMarketData } from './services/aave.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;

@@ -1,5 +1,5 @@
 import { Aptos, AptosConfig, Network } from '@aptos-labs/ts-sdk';
-import { getAssets, getTokenDecimals } from './asset';
+import { getAssets, getTokenDecimals } from './asset.js';
 
 // Initialize Aptos client for mainnet
 const config = new AptosConfig({ network: Network.MAINNET });

@@ -1,6 +1,6 @@
-import { getAaveMarketData, getAaveReserveDataOverview } from './aave';
-import { getAssetName, getTokenDecimals } from './asset';
-import { getEchelonMarketOverview } from './echelon';
+import { getAaveMarketData, getAaveReserveDataOverview } from './aave.js';
+import { getAssetName, getTokenDecimals } from './asset.js';
+import { getEchelonMarketOverview } from './echelon.js';
 
 // Get Echelon market for a specific token address
 // TODO: Replace with actual Echelon protocol integration

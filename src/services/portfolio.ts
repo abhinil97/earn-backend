@@ -1,5 +1,5 @@
-import { getAaveUserPortfolio, AaveUserPortfolio } from './aave';
-import { getEchelonUserPortfolio, EchelonUserPortfolio } from './echelon';
+import { getAaveUserPortfolio, AaveUserPortfolio } from './aave.js';
+import { getEchelonUserPortfolio, EchelonUserPortfolio } from './echelon.js';
 
 // Aggregated portfolio interface
 interface Portfolio {
