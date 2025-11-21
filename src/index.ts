@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import { getMarketByAsset } from './services/market.js';
 import { getUserPortfolio } from './services/portfolio.js';
 import { getAssets } from './services/asset.js';
@@ -7,7 +8,21 @@ import { getAaveMarketData } from './services/aave.js';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// CORS Configuration - Allow requests from your frontend
+const corsOptions = {
+  origin: [
+    'https://mock-earn-wmw.vercel.app',
+    'http://localhost:3000',
+    'http://localhost:5173'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
 // Middleware
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Disable caching for all responses
